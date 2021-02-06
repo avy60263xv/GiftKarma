@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="tw">
+
+<head>
+	<title>Gift Karma</title>
+	<link rel="Shortcut Icon" type="image/x-icon" href="../icon.ico" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="first.css" charset="utf-8" />
+	<link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css" />
+	<script src="../vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../vendor/jRange-master/jquery.range.js"></script>
+	<link rel="stylesheet" href="../vendor/jRange-master/jquery.range.css" />
+
+	<link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+	<script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	<script src="main.js"></script>
+</head>
+
+<body>
+	<!-- 選按鈕 -->
+	<div id="ProjectName">
+		<img class="Logo" src="img/loading.gif" />
+		<div class="topName">Gift Karma - 傳善計畫</div>
+		<div class="intro">請在這個頁面，以照片與文字，錄您的幫助(受助)故事</div>
+		<div class="btnDouble">
+			<a class="btn writedata" style="cursor: pointer;">開始寫故事 </a>
+			<a class="btn" style="cursor: pointer;">查看紀錄</a>
+		</div>
+	</div>
+	<!-- Banner -->
+	<img class="bannerImg" src="img/firstBanner.png" alt="">
+	<div class="triangle"></div>
+
+	<!-- ProjectForm -->
+	<div id="ProjectForm">
+		<form enctype="multipart/form-data" class="Karmaer" method="post" id="form1" name="form1" action="">
+			<!--Form裡照片區-->
+				<div class="photo">
+					<input id="show_img" style="display:none; " name="pic" type="file" onchange="readURL(this)" accept="image/*" targetID="preview_progressbarTW_img" />
+					<img class="camera" src="img/camera.png"></img><br>
+					<span class="cameraWord">拍張照！</span>
+				</div>
+				<img id="preview_progressbarTW_img" name="preview" src="">
+				<!--用來預覽的照片-->
+
+			<!--Form裡填資料區-->
+			<div class="writeData">
+				<select name="HowYouGet" class="select_place">
+					<option value="送出代幣">我要送出這顆代幣給幫助我的人</option>
+					<option value="收到代幣">我今天被幫助，收到這顆代幣</option>
+				</select>
+				<div class="age">
+					<span class="questionWord">我的年齡</span>
+					<select name="age" class="age select_place">
+						<option value="6-10">6-10歲</option>
+						<option value="11-20">11-20歲</option>
+						<option value="21-30">21-30歲</option>
+						<option value="31-40">31-40歲</option>
+						<option value="41-50">41-50歲</option>
+						<option value="51-60">51-60歲</option>
+						<option value="61-70">61-70歲</option>
+						<option value="71-80">71-80歲</option>
+						<option value="81-90">81-90歲</option>
+						<option value="91-99">91-99歲</option>
+					</select>
+				</div>
+				<!--<input type="hidden" id="ageRange" name="age" value="6-12" />-->
+				<div class="email">
+					<span class="questionWord">電子郵件</span>
+					<input type="email" class="emailCss" name="email" placeholder="這顆代幣接續傳遞,會發送信件給您"></input>
+				</div>
+				<textarea id="Story" class="storyWord" name="message" placeholder="今天..."></textarea>
+			</div>
+			<input type="button" class="btn btn-sub" value="送出" onclick="formSubmit()"   ;></input>
+
+		</form>
+	</div>
+	<!-- bottom -->
+	<div id="bottomPage">
+	</div>
+	<!--隱藏的資料-->
+	<script>
+
+
+		$('.writedata').click(function() {
+			$('html,body').animate({
+				scrollTop: $('#ProjectForm').offset().top
+			}, 800);
+		})
+
+		function readURL(input) {
+			if (input.files && input.files[0]) {
+				var reader = new FileReader();
+				
+				reader.onload = function(e) {
+					$('#preview_progressbarTW_img').attr('src', e.target.result);
+				}
+				
+				reader.readAsDataURL(input.files[0]);
+			}
+		}
+
+		$("#show_img").change(function() {
+        	readURL(this);
+    	});
+
+		/*檢查內容*/
+		function formSubmit() {
+			var frm = document.forms["form1"];
+			if (frm.message.value == "") {
+				alert("請填寫傳善的經歷!");
+				return false;
+			} else if (frm.pic.value == "") {
+				alert("請加入照片");
+				return false;
+			} else if (frm.email.value == "") {
+				alert("請填寫E-mail");
+				return false;
+			} else {
+				document.getElementById("form1").submit();
+			}
+
+		}
+		var x = document.getElementById("demo");
+		getLocation();
+
+		function createCookie(name, value, days) {
+			var expires;
+
+			if (days) {
+				var date = new Date();
+				date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+				expires = "; expires=" + date.toGMTString();
+			} else {
+				expires = "";
+			}
+
+			document.cookie = escape(name) + "=" +
+				escape(value) + expires + "; path=/";
+		}
+
+		function getLocation() {
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(showPosition);
+			} else {
+				x.innerHTML = "Geolocation is not supported by this browser.";
+			}
+		}
+
+		function showPosition(position) {
+			createCookie("Latitude", position.coords.latitude);
+			createCookie("Longitude", position.coords.longitude);
+
+		}
+
+		function getCookie(name) {
+			var value = "; " + document.cookie;
+			var parts = value.split("; " + name + "=");
+			if (parts.length == 2) return parts.pop().split(";").shift();
+		}
+
+		var Latitude1 = getCookie("Latitude")
+		var Longitude1 = getCookie("Longitude")
+		
+
+	</script>
+</body>
+
+</html>

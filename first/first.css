@@ -1,0 +1,180 @@
+@font-face{
+    font-family:"Adobe繁黑體StdB";
+    src: url(../fonts/AdobeFanHeitiStd-Bold.otf);
+}
+
+*{
+	/*border: solid 1px blue;*/
+	font-family: "Segoe UI","Adobe繁黑體StdB";
+}
+html,body{
+	margin:0px;
+	padding:0px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	font-size: 14px;
+}
+.Logo{
+	width: 100px;
+	height:auto;
+	position: absolute;
+	left: 8%;
+	top: 20px;
+}
+
+/*ProjectName*/
+#ProjectName{
+	background: linear-gradient(90deg, #759736 2%, #7ED183 75%); 
+	height: 250px;
+}
+.firstChoose{
+	color: white;
+}
+.topName{
+	font-size: 16px;
+	width: 200px;
+	position: absolute;
+	left: 40%;
+	top: 30px;
+	color: #fff;
+}
+.intro{
+	position: absolute;
+	top: 60px;
+	left: 40%;
+	width: 200px;
+	color: #fff;
+}
+.btnDouble{
+	position: absolute;
+	top: 150px;
+	left: 15%;
+}
+.btn{
+	margin: 0px 15px;
+	border: solid 1px white;
+	border-radius: 25px;
+	padding: 10px 20px;
+	color: white;
+	font-weight: 700;
+	box-shadow: 0 7px 8px 0 rgba(112, 139, 51, 0.4), 0 8px 20px 0 rgba(112, 139, 51, 0.19);
+}
+.writedata{
+	background: white;
+	color: #759736;
+}
+/*ProjectBanner*/
+.bannerImg{
+	width: 100%;
+	height: auto;
+}
+.triangle{
+	width: 0px;
+	height: 0px;
+	border-width: 30px;
+	border-color: #759736 transparent  transparent  transparent ;
+	border-style: solid;
+	margin-bottom: 30px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/*ProjectForm*/
+#ProjectForm{
+	width: 100%;
+	
+}
+
+.photo{
+	width: 100px;
+	height: 100px;
+	border: solid 3px #bdbdbd;
+	border-radius: 100%;
+}
+.camera{
+	width: 50px;
+	height: auto;
+	position: relative;
+	top: 15%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.cameraWord{
+	color: #bdbdbd;
+	position: relative;
+	left: 25px;
+}
+#preview_progressbarTW_img{
+	border: dashed 3px #bdbdbd;
+	width: 60%;
+	height: 150px;
+	position: absolute;
+	right: 5%;
+	top: 575px;
+}
+
+.select_place{
+	cursor: pointer;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	background: url("img/select_arrow.png") no-repeat right center transparent; /*箭頭標示圖案*/
+	border: solid 3px #759736;
+	width:90%;
+	height:50px;
+	margin-top: 75px;
+	margin-left: 5%;
+	padding-left:25px;
+	background-color:white;
+	color:#759736;
+	border-radius: 7px;
+	font-weight: 700;
+	font-size: 16px;
+}
+.questionWord{
+	position:relative;
+	color: #759736;
+	margin-left: 5%;
+	font-weight: 700;
+	font-size: 16px;
+}
+.age ,.email{
+	margin-top: 20px;
+}
+.emailCss{
+	width: 80%;
+	height: 50px;
+	border: solid 3px #759736;
+	color:#759736;
+	margin-left: 5%;
+	border-radius: 10px;
+	padding-left:25px;
+	font-size: 16px;
+}
+
+.storyWord{
+	margin: 75px 0px;
+	padding: 15px;
+	width: 80%;
+	height:250px;
+	border: solid 3px #bdbdbd;
+	border-radius: 10px;
+	font-size: 14px;
+	margin-left: 5%;
+}
+.btn-sub{
+	width: 25vw;
+	background: #759736;
+	color: white;
+}
+
+/*bottomPage*/
+#bottomPage{
+	width: auto;
+	height: 200px;
+	background-image: url("img/bottom_bg.png");
+	background-repeat: no-repeat;
+	background-size: 175%;
+}
+

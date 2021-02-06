@@ -1,0 +1,54 @@
+<p class="gst"><b class="qScrollTop result">1000</b></p>
+
+//JQuery 抓瀏覽器高度的值
+$(function () {
+  $(window).scroll(function () {
+    var scrollVal = $(this).scrollTop();
+    $(".qScrollTop").text(scrollVal);
+  });
+});
+
+if(scrollVal > 500){
+  /* 如果滾動的物件捲動 > 500 則觸發指定的動作。*/
+}
+
+
+
+
+//常用 jQuery 方法參數
+
+.->class  #->id
+
+
+$("p").addClass(css中定義的樣式類型); 給某個元素添加樣式
+$("img").attr({src:"test.jpg",alt:"test Image"}); 給某個元素添加屬性/值，參數是map 
+$("img").attr("src","test.jpg"); 給某個元素添加屬性/值 
+$("img").attr("title", function() { return this.src }); 給某個元素添加屬性/值 
+$("元素名稱").html(); 獲得該元素內的內容（元素，文本等） 
+$("元素名稱").html("<b>new stuff</b>"); 給某元素設置內容 
+$("元素名稱").removeAttr("屬性名稱") 給某元素刪除指定的屬性以及該屬性的值 
+$("元素名稱").removeClass("class") 給某元素刪除指定的樣式 
+$("元素名稱").text(); 獲得該元素的文本 
+$("元素名稱").text(value); 設置該元素的文本值為value 
+$("元素名稱").toggleClass(class) 當元素存在參數中的樣式的時候取消,如果不存在就設置此樣式 
+$("input元素名稱").val(); 獲取input元素的值 
+$("input元素名稱").val(value); 設置input元素的值為value 
+Manipulation： 
+$("元素名稱").after(content); 在匹配元素後面添加內容 
+$("元素名稱").append(content); 將content作為元素的內容插入到該元素的後面 
+$("元素名稱").appendTo(content); 在content後接元素 
+$("元素名稱").before(content); 與after方法相反 
+$("元素名稱").clone(布爾表達式) 當布爾表達式為真時，克隆元素（無參時，當作true處理） 
+$("元素名稱").empty() 將該元素的內容設置為空 
+$("元素名稱").insertAfter(content); 將該元素插入到content之後 
+$("元素名稱").insertBefore(content); 將該元素插入到content之前 
+$("元素").prepend(content); 將content作為該元素的一部分，放到該元素的最前面 
+$("元素").prependTo(content); 將該元素作為content的一部分，放content的最前面 
+$("元素").remove(); 刪除所有的指定元素 
+$("元素").remove("exp"); 刪除所有含有exp的元素 
+$("元素").wrap("html"); 用html來包圍該元素 
+$("元素").wrap(element); 用element來包圍該元素 
+
+
+
+http://icodding.blogspot.tw/2015/12/jquery.html
