@@ -6,6 +6,7 @@
 *{
 	/*border: solid 1px blue;*/
 	font-family: "Segoe UI","Adobe繁黑體StdB";
+	font-size: 24px;
 }
 html,body{
 	margin:0px;
@@ -13,43 +14,45 @@ html,body{
 	display: flex;
 	flex-direction: column;
 	position: relative;
-	font-size: 14px;
 }
 .Logo{
-	width: 100px;
+	width: 200px;
 	height:auto;
 	position: absolute;
-	left: 8%;
-	top: 20px;
+	left: 10%;
+	top: 150px;
 }
 
 /*ProjectName*/
 #ProjectName{
 	background: linear-gradient(90deg, #759736 2%, #7ED183 75%); 
-	height: 250px;
+	height: 500px;
 }
 .firstChoose{
 	color: white;
 }
 .topName{
-	font-size: 16px;
-	width: 200px;
+	font-size: 24px;
+	width: 50%;
 	position: absolute;
 	left: 40%;
-	top: 30px;
+	top: 100px;
 	color: #fff;
+	font-size: 50px;
 }
 .intro{
 	position: absolute;
-	top: 60px;
+	top: 200px;
 	left: 40%;
-	width: 200px;
+	width: 50%;
 	color: #fff;
+	font-size: 30px;
 }
 .btnDouble{
 	position: absolute;
-	top: 150px;
-	left: 15%;
+	top: 350px;
+	left: 40%;
+	font-size: 36px;
 }
 .btn{
 	margin: 0px 15px;
@@ -88,13 +91,15 @@ html,body{
 }
 
 .photo{
-	width: 100px;
-	height: 100px;
+	width: 250px;
+	height: 250px;
 	border: solid 3px #bdbdbd;
+	position: relative;
+	left: 20px;
 	border-radius: 100%;
 }
 .camera{
-	width: 50px;
+	width: 100px;
 	height: auto;
 	position: relative;
 	top: 15%;
@@ -104,15 +109,17 @@ html,body{
 .cameraWord{
 	color: #bdbdbd;
 	position: relative;
-	left: 25px;
+	left: 50px;
+	top: 25px;
+	font-size: 40px;
 }
 #preview_progressbarTW_img{
 	border: dashed 3px #bdbdbd;
-	width: 60%;
-	height: 150px;
+	width: 550px;
+	height: 250px;
 	position: absolute;
 	right: 5%;
-	top: 575px;
+	top: 1250px;
 }
 
 .select_place{
@@ -121,7 +128,7 @@ html,body{
 	-webkit-appearance:none;
 	background: url("img/select_arrow.png") no-repeat right center transparent; /*箭頭標示圖案*/
 	border: solid 3px #759736;
-	width:90%;
+	width:80%;
 	height:50px;
 	margin-top: 75px;
 	margin-left: 5%;
@@ -130,14 +137,14 @@ html,body{
 	color:#759736;
 	border-radius: 7px;
 	font-weight: 700;
-	font-size: 16px;
+	font-size: 25px;
 }
 .questionWord{
 	position:relative;
 	color: #759736;
 	margin-left: 5%;
 	font-weight: 700;
-	font-size: 16px;
+	font-size: 24px;
 }
 .age ,.email{
 	margin-top: 20px;
@@ -150,7 +157,7 @@ html,body{
 	margin-left: 5%;
 	border-radius: 10px;
 	padding-left:25px;
-	font-size: 16px;
+	font-size: 24px;
 }
 
 .storyWord{
@@ -160,19 +167,22 @@ html,body{
 	height:250px;
 	border: solid 3px #bdbdbd;
 	border-radius: 10px;
-	font-size: 14px;
+	font-size: 24px;
 	margin-left: 5%;
 }
 .btn-sub{
-	width: 25vw;
+	width: 300px;
 	background: #759736;
 	color: white;
+	position: relative;
+	left: 55%;
+	font-size: 24px;
 }
 
 /*bottomPage*/
 #bottomPage{
 	width: auto;
-	height: 200px;
+	height: 350px;
 	background-image: url("img/bottom_bg.png");
 	background-repeat: no-repeat;
 	background-size: 175%;

@@ -301,19 +301,6 @@
     #video_in{
       position: absolute;
     }
-    .controls_video{
-      z-index: 10;
-      position: absolute;
-	  top:80%;
-      left: 7.5%;
-      bottom: : 50px;
-      width: 280px;
-	  height: 50px;
-      display: inline-block;
-      transform: translateY(-50px);
-      cursor: pointer;
-    }
-
 
 	video::-internal-media-controls-download-button {
 		display:none;
@@ -326,19 +313,11 @@
 	video::-webkit-media-controls-panel {
 		width: calc(100% + 30px);
 	}
-    .controls_video i{
-      font-size: 18px;
-      margin-left: 15px;
-	  color: #759532;
-    }
 	.fulls_btn{
 		position:absolute;
 		right: 75px;
 	}
-	.controls_video i:hover{
-		border-bottom:1px solid white;
-		padding-bottom:2px;
-	}
+
     #ran{
       position: absolute;
       left: 125px;
@@ -487,22 +466,9 @@
 
 <header id="Gift-video" class="masthead">
     <div class="masthead row">
-		<div id="video_">
 			<div class="aspectration" data-ratio="16:9">
-			  <video preload="auto" autoplay muted id="video_in" class="content">
-				<source src="Guide/video/傳善MP4.mp4" type="video/mp4">
-			  </video>
-			</div>
+				<iframe src="https://player.vimeo.com/video/509793521?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="傳善MP4.mp4"></iframe>
 		</div>
-	  <div class="controls_video">
-		<i id="play" onclick="play()" class="fas fa-play-circle" style="visibility:visible; display: inline; float: left;"></i>
-		<i id="pause" onclick="pause()" class="fas fa-pause-circle" style="visibility:hidden; display: inline; float: left;  margin-left:-18px;"></i>
-		<i id="mute_" onclick="mute()" class="fas fa-volume-off" style="display: inline; float: left;"></i>
-		<input type="range" min="0" max="100" value="50" onchange="setvalue()" id="ran" style="display: inline; float: left; margin-left:-50px;"/ ></input>
-		<i id="fullscreen_" onclick="full_screen()" class="fas fa-arrows-alt fulls_btn" ></i>
-	  </div>
-
-
 	   <script type="text/javascript">
 		var is_mute = 0;
 		var vid = document.getElementById("video_in");
